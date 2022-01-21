@@ -10,6 +10,6 @@ app.use(express.json());
 app.set('view engine', 'html');
 app.use('/', require('./routes/rasp'));
 app.listen(port);
-console.log(`Listening On http://127.0.0.1:${port}/rasp`);
+console.log(`Listening On http://localhost:${port}/rasp`);
 
 module.exports = app;

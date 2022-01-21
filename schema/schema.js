@@ -2,7 +2,7 @@ const {Schema, model} = require("mongoose");
 
 const raspSchema = new Schema(
     {
-        state_botton: {
+        state_button: {
             type: String,
             required: [true, "state field is required"],
         },
