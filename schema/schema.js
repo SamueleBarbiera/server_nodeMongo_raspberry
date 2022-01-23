@@ -6,6 +6,10 @@ const raspSchema = new Schema(
             type: String,
             required: [true, "state field is required"],
         },
+        state_name: {
+            type: String,
+            required: [true, "name field is required"],
+        },
     },
     {timestamps: true}
 );

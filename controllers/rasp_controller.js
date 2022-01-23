@@ -20,10 +20,22 @@ const createData = (req, res) => {
         });
 };
 
-const readData = (req, res) => {
-    console.log("read")
-    User.find()
+const readDataSamuel = (req, res) => {
+    User.find({ state_name: 'samuel' })
         .then((data) => {
+            console.log("read")
+            res.status(200).json(data);
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).json(err);
+        });
+};
+
+const readDataTony = (req, res) => {
+    User.find({ state_name: 'tony' })
+        .then((data) => {
+            console.log("read")
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -57,6 +69,7 @@ const updateDataByID = (req, res) => {
 
 module.exports = {
     createData,
-    readData,
+    readDataSamuel,
     updateDataByID,
+    readDataTony,
 };
